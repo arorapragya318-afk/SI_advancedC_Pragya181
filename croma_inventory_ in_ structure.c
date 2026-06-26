@@ -6,25 +6,20 @@ int productId;
 int quantity;
 float mrp;
 float discount;
-char feature[50];
-};
-struct Cart
-{
-int productId;
-int quantity;
 float amount;
+char feature[50];
 };
 int main()
 {
 struct Product products[5] =
 {
-{101, 20, 50000, 10, "Laptop"},
-{102, 15, 30000, 15, "Smartphone"},
-{103, 10, 1500, 5, "Keyboard"},
-{104, 25, 2500, 8, "Headphones"},
-{105, 12, 4000, 12, "Smart Watch"}
+    {1001,20,40000,10,0,"Laptop"},
+    {1002,15,90000,15,0,"Smartphone"},
+    {1003,10,1000,5,0,"Television"},
+    {1004,25,5600,8,0,"Mixer"},
+    {1005,12,2500,12,0,"Smart Watch"}
 };
-struct Cart cart[20];
+struct Product cart[20];
 int choice;
 int cartCount = 0;
 float grandTotal = 0;
@@ -45,7 +40,7 @@ printf("\n----- INVENTORY STOCK -----\n");
 printf("ID\tFeature\t\tQty\tMRP\tDiscount\n");
 for(int i = 0; i < 5; i++)
 {
-printf("%d\t%s\t%d\t%f\t%f%\n",products[i].productId,products[i].feature,products[i].quantity,products[i].mrp, products[i].discount);                       
+printf("%d\t%s\t%d\t%f\t%f\n",products[i].productId,products[i].feature,products[i].quantity,products[i].mrp, products[i].discount);                       
 }
 break;
 }
