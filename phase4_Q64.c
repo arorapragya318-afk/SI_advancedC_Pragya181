@@ -8,7 +8,7 @@ printf("Enter a string: ");
 fgets(str, sizeof(str), stdin);
 for (int i = 0; str[i] != '\0'; i++) 
 {
-freq[(unsigned char)str[i]]++;
+freq[(char)str[i]]++;
 }
 printf("\nCharacter Frequencies:\n");
 for (int i = 0; i < 256; i++) 
